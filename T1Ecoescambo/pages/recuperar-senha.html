@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   EcoEscambo - Recuperar Acesso
+  </title>
+  <link href="../css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="browser">
+   <header class="browser-title">
+    EcoEscambo - Login
+   </header>
+   <div class="address">
+    https://www.ecoescambo.com.br
+   </div>
+   <main class="page-content center-content">
+    <section class="auth-card">
+     <h1>
+      Autenticação
+     </h1>
+     <form id="recoveryForm">
+      <label for="recoveryEmail">
+       E-mail:
+      </label>
+      <input id="recoveryEmail" placeholder="fulano@email.com" required="" type="email"/>
+      <button class="btn blue" disabled="" id="recoveryButton" type="submit">
+       Recuperar Acesso
+      </button>
+     </form>
+     <p class="success" id="recoveryMessage">
+     </p>
+     <a class="small-link" href="login.html">
+      Voltar para autenticação
+     </a>
+    </section>
+   </main>
+  </div>
+  <script src="../js/validation.js">
+  </script>
+ </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   EcoEscambo - Catálogo
+  </title>
+  <link href="../css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="browser">
+   <header class="browser-title">
+    EcoEscambo - Catálogo
+   </header>
+   <div class="address">
+    https://www.ecoescambo.com.br
+   </div>
+   <main class="page-content">
+    <nav class="top-nav">
+     <a href="catalogo.html">
+      Catálogo
+     </a>
+     |
+     <a href="meus-produtos.html">
+      Meus Produtos
+     </a>
+    </nav>
+    <div class="filters">
+     Filtrar:
+     <label>
+      <input checked="" data-filter="" name="filter" type="radio" value="all"/>
+      Todos
+     </label>
+     <label>
+      <input data-filter="" name="filter" type="radio" value="interested"/>
+      Só nos quais estou interessado
+     </label>
+    </div>
+    <section class="product-list">
+     <article class="product-row catalog-row" data-interested="false">
+      <img alt="Produto" class="product-image" src="../assets/img/placeholder.svg"/>
+      <div class="product-info">
+       <strong>
+        Livro de receitas usado
+       </strong>
+       <p>
+        Livro em bom estado, ideal para quem gosta de cozinhar e testar receitas novas.
+       </p>
+      </div>
+      <div class="actions">
+       <button class="btn blue" data-interest="produto1">
+        Tenho interesse
+       </button>
+      </div>
+     </article>
+     <article class="product-row catalog-row" data-interested="false">
+      <img alt="Produto" class="product-image" src="../assets/img/placeholder.svg"/>
+      <div class="product-info">
+       <strong>
+        Vaso de plantas
+       </strong>
+       <p>
+        Vaso de cerâmica reutilizado, perfeito para pequenas plantas.
+       </p>
+      </div>
+      <div class="actions">
+       <button class="btn red" data-interest="produto2">
+        Tirar Interesse
+       </button>
+      </div>
+     </article>
+     <article class="product-row catalog-row" data-interested="false">
+      <img alt="Produto" class="product-image" src="../assets/img/placeholder.svg"/>
+      <div class="product-info">
+       <strong>
+        Garrafa reutilizável
+       </strong>
+       <p>
+        Garrafa térmica em ótimo estado para uso diário.
+       </p>
+      </div>
+      <div class="actions">
+       <button class="btn blue" data-interest="produto3">
+        Tenho interesse
+       </button>
+      </div>
+     </article>
+    </section>
+    <div class="pagination">
+     &lt;&lt;
+     <a href="#">
+      Prev
+     </a>
+     <a href="#">
+      1
+     </a>
+     <a href="#">
+      2
+     </a>
+     <a href="#">
+      3
+     </a>
+     <a href="#">
+      4
+     </a>
+     <a href="#">
+      5
+     </a>
+     <a href="#">
+      6
+     </a>
+     <a href="#">
+      7
+     </a>
+     <a href="#">
+      8
+     </a>
+     <a href="#">
+      9
+     </a>
+     <a href="#">
+      10
+     </a>
+     <a href="#">
+      Next
+     </a>
+     &gt;&gt;
+    </div>
+   </main>
+  </div>
+  <script src="../js/navigation.js">
+  </script>
+ </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>EcoEscambo - Cadastro de Produto</title>
+    <link rel="stylesheet" href="../css/global.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header-title">EcoEscambo - Novo Produto</div>
+        <input type="text" class="fake-url" value="https://www.ecoescambo.com.br/cadastro" readonly>
+        
+        <div class="nav-links">
+            <a href="catalogo.html">Voltar ao Catálogo</a>
+        </div>
+
+        <form id="formCadastroProduto" style="width: 60%;">
+            <div class="form-group">
+                <label>Título:</label>
+                <input type="text" id="nome" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Categoria:</label>
+                <input type="text" id="categoria" list="listaCategorias" placeholder="Selecione ou digite uma..." required>
+                <datalist id="listaCategorias">
+                    <option value="Livros">
+                    <option value="Eletrônicos">
+                    <option value="Roupas e Calçados">
+                    <option value="Móveis e Decoração">
+                    <option value="Videogames e Consoles">
+                    <option value="Instrumentos Musicais">
+                    <option value="Esporte e Lazer">
+                </datalist>
+            </div>
+
+            <div class="form-group">
+                <label>Marca (Opcional):</label>
+                <input type="text" id="marca" list="listaMarcas">
+                <datalist id="listaMarcas">
+                    <option value="Apple">
+                    <option value="Novatec">
+                    <option value="Samsung">
+                    <option value="Levi's">
+                    <option value="Yamaha">
+                </datalist>
+            </div>
+
+            <div class="form-group">
+                <label>Condição:</label>
+                <select id="condicao" required>
+                    <option value="">Selecione...</option>
+                    <option value="novo">Novo</option>
+                    <option value="usado">Usado</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Região:</label>
+                <select id="regiao" required>
+                    <option value="">Selecione...</option>
+                    <option value="centro">Centro</option>
+                    <option value="zonasul">Zona Sul</option>
+                    <option value="zonanorte">Zona Norte</option>
+                    <option value="zonaoeste">Zona Oeste</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>O que aceita em troca:</label>
+                <input type="text" id="descricao" required>
+            </div>
+
+            <div class="form-group">
+                <label>Foto:</label>
+                <input type="file" id="imagemFile" accept="image/*">
+            </div>
+            
+            <button type="submit" class="btn-blue">Cadastrar</button>
+        </form>
+    </div>
+
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

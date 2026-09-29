@@ -1,0 +1,146 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+  background: #fff;
+  font-size: 14px;
+}
+
+a { color: #0000ee; }
+button, input, textarea, select { font: inherit; }
+button, .btn { cursor: pointer; }
+button:disabled { cursor: not-allowed; opacity: .55; }
+
+.browser {
+  width: min(900px, calc(100% - 32px));
+  min-height: 650px;
+  margin: 35px auto;
+  border: 1px solid #aaa;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,.08);
+}
+
+.browser-title {
+  height: 42px;
+  padding: 11px 18px;
+  border-bottom: 1px solid #ddd;
+  color: #666;
+  font-size: 18px;
+}
+
+.address {
+  margin: 12px 14px;
+  height: 36px;
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #666;
+  background: #fafafa;
+}
+
+.page-content { padding: 28px 36px; }
+.center-content { display: flex; justify-content: center; align-items: flex-start; }
+
+.auth-card {
+  width: 245px;
+  border: 1px solid #ccc;
+  padding: 12px;
+}
+.auth-card h1 { margin: 0 0 12px; padding-bottom: 8px; border-bottom: 1px solid #ddd; font-size: 15px; font-weight: normal; }
+.auth-card label { display: block; margin: 8px 0 3px; font-size: 12px; }
+.auth-card input { width: 100%; height: 28px; border: 1px solid #aaa; padding: 4px 6px; }
+.auth-card form .btn { width: 100%; margin-top: 10px; }
+.auth-card hr { border: 0; border-top: 1px solid #ddd; margin: 14px 0 8px; }
+.small-link { display: block; margin-top: 7px; font-size: 11px; }
+.small-text { margin: 0 0 5px; font-size: 11px; }
+.small-btn { display: inline-block; font-size: 12px; padding: 4px 10px !important; }
+
+.btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 5px;
+  padding: 8px 15px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+.blue { background: #168bea; }
+.green { background: #8bcf6b; color: #fff; }
+.red { background: #ff3c3c; }
+.gray { background: #777; }
+
+.top-nav { margin: 0 0 20px; }
+.top-nav a { margin-right: 8px; }
+
+.filters { margin: 12px 0 22px; }
+.filters label { margin-right: 28px; }
+
+.product-list { max-width: 760px; }
+.product-row {
+  display: grid;
+  grid-template-columns: 66px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.product-image {
+  width: 55px;
+  height: 65px;
+  border: 1px solid #aaa;
+  background: #f8f8f8;
+  object-fit: cover;
+}
+.product-info strong { display: block; margin-bottom: 3px; }
+.product-info p { margin: 0; line-height: 1.25; }
+
+.pagination { margin: 20px 0; }
+.pagination a { margin-right: 4px; }
+
+.actions { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+.actions .btn { padding: 6px 10px; font-size: 12px; }
+
+.form-box { max-width: 620px; margin: 0 auto; }
+.form-box label { display: block; margin: 12px 0 5px; font-weight: bold; }
+.form-box input, .form-box textarea, .form-box select { width: 100%; padding: 8px; border: 1px solid #aaa; }
+.form-box textarea { min-height: 100px; resize: vertical; }
+.form-box .btn { margin-top: 18px; }
+
+.notice {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  margin-bottom: 15px;
+}
+
+.interest-summary { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+
+.offer-card {
+  border-top: 1px solid #222;
+  padding: 14px 0;
+}
+.offer-card h2 { margin: 0 0 8px; }
+.offer-line { display: grid; grid-template-columns: 100px 1fr auto; gap: 12px; align-items: center; margin-top: 10px; }
+
+.offer-analysis { max-width: 620px; margin: 0 auto; }
+.offer-analysis h1 { margin-bottom: 6px; }
+.offer-analysis .main-product { display: flex; gap: 12px; align-items: center; padding-bottom: 10px; border-bottom: 1px solid #222; }
+.offer-analysis .main-product img { width: 55px; height: 65px; border: 1px solid #aaa; }
+.offer-analysis .interested { margin: 14px 0; }
+.offer-analysis .swap { display: flex; gap: 12px; align-items: center; margin: 12px 0 18px; }
+.offer-analysis .swap img { width: 55px; height: 65px; border: 1px solid #aaa; }
+
+.hidden { display: none !important; }
+.error { color: #c00; font-size: 12px; margin-top: 5px; }
+.success { color: #287a1e; font-size: 12px; margin-top: 8px; }
+
+@media (max-width: 700px) {
+  .browser { width: calc(100% - 16px); margin: 8px auto; }
+  .page-content { padding: 20px 14px; }
+  .product-row { grid-template-columns: 55px 1fr; }
+  .product-row .actions { grid-column: 2; justify-content: flex-start; }
+  .offer-line { grid-template-columns: 70px 1fr; }
+  .offer-line .btn { grid-column: 2; justify-self: start; }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   EcoEscambo - Login
+  </title>
+  <link href="../css/style.css" rel="stylesheet"/>
+ </head>
+ <body class="browser-page">
+  <div class="browser">
+   <header class="browser-title">
+    EcoEscambo - Login
+   </header>
+   <div class="address">
+    https://www.ecoescambo.com.br
+   </div>
+   <main class="page-content center-content">
+    <section class="auth-card">
+     <h1>
+      Autenticação
+     </h1>
+     <form id="loginForm">
+      <label for="loginEmail">
+       E-mail:
+      </label>
+      <input id="loginEmail" placeholder="fulano@email.com" required="" type="email"/>
+      <label for="loginPassword">
+       Senha:
+      </label>
+      <input id="loginPassword" required="" type="password"/>
+      <button class="btn blue" disabled="" id="loginButton" type="submit">
+       Login
+      </button>
+     </form>
+     <a class="small-link" href="recuperar-senha.html">
+      Esqueceu a senha?
+     </a>
+     <hr/>
+     <p class="small-text">
+      Ainda não é usuário?
+     </p>
+     <a class="btn blue small-btn" href="cadastro.html">
+      Cadastro
+     </a>
+    </section>
+   </main>
+  </div>
+  <script src="../js/validation.js">
+  </script>
+ </body>
+</html>
