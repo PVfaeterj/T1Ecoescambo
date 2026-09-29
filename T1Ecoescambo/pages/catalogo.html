@@ -1,135 +1,111 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   EcoEscambo - Catálogo
-  </title>
-  <link href="../css/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <div class="browser">
-   <header class="browser-title">
-    EcoEscambo - Catálogo
-   </header>
-   <div class="address">
-    https://www.ecoescambo.com.br
-   </div>
-   <main class="page-content">
-    <nav class="top-nav">
-     <a href="catalogo.html">
-      Catálogo
-     </a>
-     |
-     <a href="meus-produtos.html">
-      Meus Produtos
-     </a>
-    </nav>
-    <div class="filters">
-     Filtrar:
-     <label>
-      <input checked="" data-filter="" name="filter" type="radio" value="all"/>
-      Todos
-     </label>
-     <label>
-      <input data-filter="" name="filter" type="radio" value="interested"/>
-      Só nos quais estou interessado
-     </label>
+<head>
+    <meta charset="UTF-8">
+    <title>EcoEscambo - Catálogo</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <style>
+        .filtros-box select, .filtros-box input { margin-right: 5px; padding: 3px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-title">EcoEscambo - Catálogo</div>
+        <input type="text" class="fake-url" value="https://www.ecoescambo.com.br/catalogo" readonly>
+        
+        <div class="nav-links">
+            <a href="catalogo.html">Catálogo</a> | <a href="meus-produtos.html">Meus Produtos</a> | <a href="../index.html">Sair</a>
+            <span class="contador-simples">Interesses marcados: <span id="numInteresses">0</span></span>
+        </div>
+
+        <div class="filtros-box">
+            Filtrar: 
+            <input type="text" id="inputBusca" placeholder="Pesquisar...">
+            <select id="selectCondicao">
+                <option value="">Qualquer Condição</option>
+                <option value="novo">Novo</option>
+                <option value="usado">Usado</option>
+            </select>
+            <select id="selectRegiao">
+                <option value="">Qualquer Região</option>
+                <option value="centro">Centro</option>
+                <option value="zonasul">Zona Sul</option>
+                <option value="zonanorte">Zona Norte</option>
+                <option value="zonaoeste">Zona Oeste</option>
+            </select>
+            <select id="selectOrdem">
+                <option value="">Ordem (A-Z)</option>
+                <option value="az">A-Z</option>
+                <option value="za">Z-A</option>
+            </select>
+        </div>
+
+        <div class="item-list" id="gridCatalogo">
+            <div class="item-row" data-condicao="usado" data-regiao="centro">
+                <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=100&q=80" alt="Jaqueta">
+                <div class="item-info">
+                    <h4>Jaqueta Jeans Levi's</h4>
+                    <p>Condição: Usado | Região: Centro</p>
+                    <p>Aceita: Tênis, mochila, roupas</p>
+                </div>
+                <button class="btn-blue btn-interesse">Tenho interesse</button>
+            </div>
+            
+            <div class="item-row" data-condicao="usado" data-regiao="zonasul">
+                <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=100&q=80" alt="Violão">
+                <div class="item-info">
+                    <h4>Violão Acústico Yamaha</h4>
+                    <p>Condição: Usado | Região: Zona Sul</p>
+                    <p>Aceita: Celular, livros</p>
+                </div>
+                <button class="btn-blue btn-interesse">Tenho interesse</button>
+            </div>
+
+            <div class="item-row" data-condicao="usado" data-regiao="zonanorte">
+                <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=100&q=80" alt="Celular">
+                <div class="item-info">
+                    <h4>Samsung Galaxy S23</h4>
+                    <p>Condição: Usado | Região: Zona Norte</p>
+                    <p>Aceita: Fone de ouvido, smartwatch</p>
+                </div>
+                <button class="btn-blue btn-interesse">Tenho interesse</button>
+            </div>
+
+            <div class="item-row" data-condicao="novo" data-regiao="centro">
+                <img src="https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?w=100&q=80" alt="Cadeira">
+                <div class="item-info">
+                    <h4>Cadeira Flexform</h4>
+                    <p>Condição: Novo | Região: Centro</p>
+                    <p>Aceita: Mesa de escritório</p>
+                </div>
+                <button class="btn-blue btn-interesse">Tenho interesse</button>
+            </div>
+
+            <div class="item-row" data-condicao="novo" data-regiao="zonaoeste">
+                <img src="https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=100&q=80" alt="Fone">
+                <div class="item-info">
+                    <h4>AirPods Pro Apple</h4>
+                    <p>Condição: Novo | Região: Zona Oeste</p>
+                    <p>Aceita: Mouse, teclado sem fio</p>
+                </div>
+                <button class="btn-blue btn-interesse">Tenho interesse</button>
+            </div>
+
+            <div class="item-row" data-condicao="usado" data-regiao="zonasul">
+                <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=100&q=80" alt="Relógio">
+                <div class="item-info">
+                    <h4>Relógio Casio Vintage</h4>
+                    <p>Condição: Usado | Região: Zona Sul</p>
+                    <p>Aceita: Acessórios em geral</p>
+                </div>
+                <button class="btn-blue btn-interesse">Tenho interesse</button>
+            </div>
+        </div>
+
+        <br>
+        <button class="btn-blue" onclick="window.location.href='cadastro-produto.html'">Cadastrar Novo</button>
     </div>
-    <section class="product-list">
-     <article class="product-row catalog-row" data-interested="false">
-      <img alt="Produto" class="product-image" src="../assets/img/placeholder.svg"/>
-      <div class="product-info">
-       <strong>
-        Livro de receitas usado
-       </strong>
-       <p>
-        Livro em bom estado, ideal para quem gosta de cozinhar e testar receitas novas.
-       </p>
-      </div>
-      <div class="actions">
-       <button class="btn blue" data-interest="produto1">
-        Tenho interesse
-       </button>
-      </div>
-     </article>
-     <article class="product-row catalog-row" data-interested="false">
-      <img alt="Produto" class="product-image" src="../assets/img/placeholder.svg"/>
-      <div class="product-info">
-       <strong>
-        Vaso de plantas
-       </strong>
-       <p>
-        Vaso de cerâmica reutilizado, perfeito para pequenas plantas.
-       </p>
-      </div>
-      <div class="actions">
-       <button class="btn red" data-interest="produto2">
-        Tirar Interesse
-       </button>
-      </div>
-     </article>
-     <article class="product-row catalog-row" data-interested="false">
-      <img alt="Produto" class="product-image" src="../assets/img/placeholder.svg"/>
-      <div class="product-info">
-       <strong>
-        Garrafa reutilizável
-       </strong>
-       <p>
-        Garrafa térmica em ótimo estado para uso diário.
-       </p>
-      </div>
-      <div class="actions">
-       <button class="btn blue" data-interest="produto3">
-        Tenho interesse
-       </button>
-      </div>
-     </article>
-    </section>
-    <div class="pagination">
-     &lt;&lt;
-     <a href="#">
-      Prev
-     </a>
-     <a href="#">
-      1
-     </a>
-     <a href="#">
-      2
-     </a>
-     <a href="#">
-      3
-     </a>
-     <a href="#">
-      4
-     </a>
-     <a href="#">
-      5
-     </a>
-     <a href="#">
-      6
-     </a>
-     <a href="#">
-      7
-     </a>
-     <a href="#">
-      8
-     </a>
-     <a href="#">
-      9
-     </a>
-     <a href="#">
-      10
-     </a>
-     <a href="#">
-      Next
-     </a>
-     &gt;&gt;
-    </div>
-   </main>
-  </div>
-  <script src="../js/navigation.js">
-  </script>
- </body>
+
+    <script src="../js/navigation.js"></script>
+</body>
 </html>
